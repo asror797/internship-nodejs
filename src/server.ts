@@ -6,7 +6,7 @@ import './config/ormconfig'
 import router from './routes/routes'
 import swaggerDocument from './swagger.json'
 
-
+app.use(express.json())
 app.use(router)
 
 app.use('/swagger',swaggerUi.serve,swaggerUi.setup(swaggerDocument))

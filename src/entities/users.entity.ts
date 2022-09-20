@@ -29,22 +29,20 @@ export class Users {
 
    @Column({
       type:"boolean",
-      default:true
+      default:true,
+      nullable:false
    })
    isFree:boolean
 
    @Column({
-      type:"varchar",
-      length:16,
-      nullable:false
+      type:"timestamp without time zone",
+      default:""
    })
    createdAt:string
 
    @Column({
-      type:"varchar",
-      length:32,
-      nullable:false,
-      onUpdate:"CURRENT_TIMESTAMP(0)"
+      type:"timestamp with time zone",
+      onUpdate:"now()"
    })
    updateAt:string
 }

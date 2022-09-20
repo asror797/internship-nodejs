@@ -12,5 +12,28 @@ export default {
          console.log(error)
          res.sendStatus(500)
       }
+   },
+   POST:async(req:Request, res:Response) => {
+      try {
+         const { firstname , lastname , age } = req.body
+
+         const user = await dataSource
+                                 .createQueryBuilder()
+                                 .insert()
+                                 .into(Users)
+                                 .values({
+                                    firstname:firstname,
+                                    lastname:lastname,
+                                    age:age
+                                 })
+                                 .returning('*')
+                                 .execute()
+         res.json(user)
+                                 
+
+      } catch (error) {
+         console.log(error)
+         res.sendStatus(500)
+      }
    }
 }
