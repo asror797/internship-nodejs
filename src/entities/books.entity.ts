@@ -5,8 +5,8 @@ import { Entity , PrimaryGeneratedColumn , Column } from "typeorm";
    name:"books"
 })
 export class Books {
-   @PrimaryGeneratedColumn("uuid")
-   id:string
+   @PrimaryGeneratedColumn("increment")
+   id:number
 
    @Column({
       type:"varchar",
