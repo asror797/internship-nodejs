@@ -9,6 +9,12 @@ export class Books {
    id:number
 
    @Column({
+      type:"int",
+      nullable:false
+   })
+   userID:number
+
+   @Column({
       type:"varchar",
       length:128,
       nullable:false

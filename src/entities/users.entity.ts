@@ -25,16 +25,26 @@ export class Users {
       type:"int",
       nullable:false
    })
-   age:string
+   age:number
 
-
-   @Column()
+   @Column({
+      type:"boolean",
+      default:true
+   })
    isFree:boolean
 
-
-   @Column()
+   @Column({
+      type:"varchar",
+      length:16,
+      nullable:false
+   })
    createdAt:string
 
-   @Column()
+   @Column({
+      type:"varchar",
+      length:32,
+      nullable:false,
+      onUpdate:"CURRENT_TIMESTAMP(0)"
+   })
    updateAt:string
 }

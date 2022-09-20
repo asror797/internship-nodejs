@@ -5,7 +5,7 @@ export const dataSource = new DataSource({
     type: 'postgres',
     host: 'localhost',
     port: 5432,
-    username: 'postgres',
+    username: 'asror',
     database:'internship',
     password: 'aaa13579#',
     synchronize: true,
