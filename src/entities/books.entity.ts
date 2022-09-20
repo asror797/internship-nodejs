@@ -1,7 +1,9 @@
 import { Entity , PrimaryGeneratedColumn , Column } from "typeorm";
 
 
-@Entity()
+@Entity({
+   name:"books"
+})
 export class Books {
    @PrimaryGeneratedColumn("uuid")
    id:string

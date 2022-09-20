@@ -1,6 +1,8 @@
 import { Entity , PrimaryGeneratedColumn , Column } from "typeorm"
 
-@Entity()
+@Entity({
+   name:"users"
+})
 export class Users {
    @PrimaryGeneratedColumn("uuid")
    id:string
@@ -34,5 +36,5 @@ export class Users {
    createdAt:string
 
    @Column()
-   updateAtL:string
+   updateAt:string
 }
