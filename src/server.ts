@@ -1,5 +1,5 @@
-import express from 'express'
-const PORT = 9000
+import express , { Request , Response } from 'express'
+const PORT:number = 9000
 const app: express.Application= express()
 
 
