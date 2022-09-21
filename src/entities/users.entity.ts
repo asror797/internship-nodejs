@@ -35,12 +35,12 @@ export class Users {
    isFree:boolean
 
    @CreateDateColumn({
-      type:"timestamp without time zone"
+      type:"date"
    })
-   createdAt:Date
+   createdAt:string
 
    @UpdateDateColumn({
-      type:"timestamp without time zone"
+      type:"date"
    })
-   updatedAt:Date
+   updatedAt:string
 }
