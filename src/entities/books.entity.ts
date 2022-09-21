@@ -30,7 +30,7 @@ export class Books {
 
    @Column({
       type:"varchar",
-      length:64,
+      length:16,
       nullable:false
    })
    createdAt:string

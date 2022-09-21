@@ -35,14 +35,14 @@ export class Users {
    isFree:boolean
 
    @Column({
-      type:"timestamp without time zone",
-      default:""
+      type:"varchar",
+      length:16
    })
    createdAt:string
 
    @Column({
-      type:"timestamp with time zone",
-      onUpdate:"now()"
+      type:"varchar",
+      length:16
    })
    updateAt:string
 }
