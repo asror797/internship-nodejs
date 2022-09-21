@@ -17,14 +17,14 @@ export default {
    POST:async(req:Request, res:Response) => {
       try {
 
-         const user = await dataSource
+         const { raw } = await dataSource
             .createQueryBuilder()
             .insert()
             .into(Users)
             .values(req.body)
             .returning('*')
             .execute()
-         res.json(user)
+         res.json(raw[0])
                                  
 
       } catch (error) {

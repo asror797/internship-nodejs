@@ -1,4 +1,4 @@
-import { Entity , PrimaryGeneratedColumn , Column } from "typeorm"
+import { Entity , PrimaryGeneratedColumn , Column, CreateDateColumn, UpdateDateColumn } from "typeorm"
 
 @Entity({
    name:"users"
@@ -34,15 +34,13 @@ export class Users {
    })
    isFree:boolean
 
-   @Column({
-      type:"varchar",
-      length:16
+   @CreateDateColumn({
+      type:"timestamp without time zone"
    })
-   createdAt:string
+   createdAt:Date
 
-   @Column({
-      type:"varchar",
-      length:16
+   @UpdateDateColumn({
+      type:"timestamp without time zone"
    })
-   updateAt:string
+   updatedAt:Date
 }
