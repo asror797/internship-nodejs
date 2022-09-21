@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { dataSource } from './../config/ormconfig';
 import { Users } from './../entities/users.entity'
-import moment from "moment";
+// import moment from "moment";
 
 
 export default {
@@ -45,6 +45,15 @@ export default {
             
          res.json(updateUser)
 
+      } catch (error) {
+         console.log(error)
+         res.sendStatus(500)
+      }
+   },
+   DELETE:async(req:Request,res:Response) => {
+      try {
+         console.log(req.body)
+         res.send('ok')
       } catch (error) {
          console.log(error)
          res.sendStatus(500)
